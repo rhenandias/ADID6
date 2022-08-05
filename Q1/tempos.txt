@@ -1,0 +1,2 @@
+Linguagem 1 -> Python -> Média de 0,028s
+Linguagem 2 -> C -> Média de 0,008s
