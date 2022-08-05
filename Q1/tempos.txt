@@ -1,2 +1,77 @@
 Linguagem 1 -> Python -> Média de 0,028s
 Linguagem 2 -> C -> Média de 0,008s
+
+Repositório no Github: https://github.com/rhenandias/ADID6/tree/main/Q1
+
+=====================================================================
+Código em C
+=====================================================================
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/time.h>
+#include <time.h>
+#include <math.h>
+
+int main()
+{
+  srand(time(NULL));
+  struct timeval inicio, final;
+  double deltaT;
+
+  int acertos;
+  int n = 100000;
+
+  gettimeofday(&inicio, NULL);
+
+  for (int i = 0; i < n; i++)
+  {
+    float x = (double)rand() / (double)RAND_MAX;
+    float y = (double)rand() / (double)RAND_MAX;
+
+    if (pow(x, 2) + pow(y, 2) <= 1.0)
+      acertos++;
+  }
+
+  double res = 4.0 * acertos / (double)n;
+
+  gettimeofday(&final, NULL);
+
+  deltaT = (final.tv_sec + final.tv_usec / 1000000.0) - (inicio.tv_sec + inicio.tv_usec / 1000000.0);
+
+  printf("Valor final obtido após %d iteracoes: %f\n", n, res);
+  printf("Tempo gasto no procedimento: %f segundos\n", deltaT);
+
+  // Para usuários do Windows, descomente a linha a seguir
+  // system("pause");
+
+  return 0;
+}
+
+=====================================================================
+Código em Python
+=====================================================================
+
+#!/usr/bin/python
+from random import seed
+from random import random
+from datetime import datetime
+from time import time
+
+seed(datetime.now())
+
+n = 100000
+acertos = 0
+
+inicio = time()
+
+for i in range(n):
+    x = random()
+    y = random()
+    if x * x + y * y <= 1.0:
+        acertos = acertos + 1
+
+final = time() - inicio
+
+print("Valor final: " + str(4 * acertos / n))
+print("Tempo gasto no procedimento: " + str(final))
