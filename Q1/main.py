@@ -6,7 +6,7 @@ from time import time
 
 seed(datetime.now())
 
-n = 100000
+n = 10000000
 acertos = 0
 
 inicio = time()

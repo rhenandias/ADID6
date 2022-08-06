@@ -11,11 +11,11 @@ int main()
   double deltaT;
 
   int acertos;
-  int n = 100000;
+  unsigned int n = 10000000;
 
   gettimeofday(&inicio, NULL);
 
-  for (int i = 0; i < n; i++)
+  for (unsigned int i = 0; i < n; i++)
   {
     float x = (double)rand() / (double)RAND_MAX;
     float y = (double)rand() / (double)RAND_MAX;
