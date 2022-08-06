@@ -1,5 +1,5 @@
 Linguagem 1 -> Python -> Média de 2,8s
-Linguagem 2 -> C -> Média de 0,8s
+Linguagem 2 -> C -> Média de 0,2s
 
 Repositório no Github: https://github.com/rhenandias/ADID6/tree/main/Q1
 
@@ -29,7 +29,7 @@ int main()
     float x = (double)rand() / (double)RAND_MAX;
     float y = (double)rand() / (double)RAND_MAX;
 
-    if (pow(x, 2) + pow(y, 2) <= 1.0)
+    if (x * x + y * y <= 1.0)
       acertos++;
   }
 

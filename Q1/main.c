@@ -20,7 +20,7 @@ int main()
     float x = (double)rand() / (double)RAND_MAX;
     float y = (double)rand() / (double)RAND_MAX;
 
-    if (pow(x, 2) + pow(y, 2) <= 1.0)
+    if (x * x + y * y <= 1.0)
       acertos++;
   }
 
