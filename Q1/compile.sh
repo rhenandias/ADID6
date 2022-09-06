@@ -1,0 +1,1 @@
+gcc -pthread thread.c -o thread
